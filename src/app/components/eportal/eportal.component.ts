@@ -9,7 +9,11 @@ export class EportalComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+  
+    selected = 'option2';
+  
+    
+  
 
 }
