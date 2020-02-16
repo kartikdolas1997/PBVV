@@ -2,3 +2,29 @@
 .form-control {
     width: 50%;
 }
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px ;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* tr:nth-child(even) {
+     background-color: #dddddd; 
+  } */
