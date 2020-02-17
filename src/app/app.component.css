@@ -19,7 +19,7 @@
   nav {
     float: left;
     width: 10%;
-    height: 620px; 
+    height: 970px; 
     background: #ccc;
     padding: 20px;
   }
@@ -35,7 +35,7 @@
     padding: 20px;
     width: 90%;
     background-color: #f1f1f1;
-    height: 620px; /* only for demonstration, should be removed */
+    height: 970px;  /* only for demonstration, should be removed */
   }
   
   /* Clear floats after the columns */
