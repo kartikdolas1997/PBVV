@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {EportalService} from './eportal.service'
 
 @Component({
   selector: 'app-eportal',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class EportalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _eportalservice:EportalService) { }
 
   ngOnInit(): void {}
   
@@ -16,10 +17,10 @@ export class EportalComponent implements OnInit {
 
       
     favoriteheadboy: string;
-    headboys: string[] = ['Boy1', 'Boy2', 'Boy3', 'Boy4'];
+    headboys = this._eportalservice.headboys;
 
     favoriteheadgirl: string;
-    headgirls: string[] = ['Girl1', 'Girl2', 'Girl3', 'Girl4'];
+    headgirls = this._eportalservice.headgirls;
 
 }
 
