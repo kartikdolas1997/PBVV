@@ -12,4 +12,9 @@ export class CustomizeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit()
+  {
+    
+  }
+
 }

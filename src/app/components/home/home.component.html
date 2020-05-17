@@ -1,6 +1,16 @@
-<h1>How to use the app</h1>
-    <p>This page consists user guide for the app.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-    <button mat-raised-button>Submit</button>
-    
-    
+<form #login="ngForm">
+    <mat-form-field class="example-full-width">
+        <mat-label>Role</mat-label>
+        <mat-select [(ngModel)]="role" name="Role">
+        <mat-option value="Teacher">Teacher</mat-option>
+        <mat-option value="Student">Student</mat-option>
+        </mat-select>
+    </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput type="password" [(ngModel)]="password" name="Password">
+  </mat-form-field>
+  <br>
+</form>
+<button mat-raised-button (click)="onSubmit(login)">Submit</button>

@@ -24,7 +24,6 @@ export class EportalComponent implements OnInit {
 
     
     myFunction(){
-      // console.log("slect",test);
       console.log("myFunction called")
       if(this.selected =="Red")
       {

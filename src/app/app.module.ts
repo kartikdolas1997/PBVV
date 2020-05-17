@@ -11,10 +11,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule } from '@angular/forms'
 import {MatInputModule} from '@angular/material/input';
-// import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import { RedCustomizeComponent } from './components/red-customize/red-customize.component';
+import { BlueCustomizeComponent } from './components/blue-customize/blue-customize.component';
+import { GreenCustomizeComponent } from './components/green-customize/green-customize.component';
+import { YellowCustomizeComponent } from './components/yellow-customize/yellow-customize.component';
+
 
 
 @NgModule({
@@ -23,7 +28,11 @@ import {MatInputModule} from '@angular/material/input';
     CustomizeComponent,
     EportalComponent,
     ResultsComponent,
-    HomeComponent
+    HomeComponent,
+    RedCustomizeComponent,
+    BlueCustomizeComponent,
+    GreenCustomizeComponent,
+    YellowCustomizeComponent
   ],
 
   imports: [
@@ -34,12 +43,10 @@ import {MatInputModule} from '@angular/material/input';
     MatFormFieldModule,
     MatButtonModule,
     MatRadioModule,
-    FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    // MatTableModule, 
-    // MatPaginatorModule, 
-    // MatSortModule
+    FormsModule,
+    MatTabsModule
 
     
   ],
