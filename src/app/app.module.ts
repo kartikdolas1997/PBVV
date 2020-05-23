@@ -19,6 +19,7 @@ import { RedCustomizeComponent } from './components/red-customize/red-customize.
 import { BlueCustomizeComponent } from './components/blue-customize/blue-customize.component';
 import { GreenCustomizeComponent } from './components/green-customize/green-customize.component';
 import { YellowCustomizeComponent } from './components/yellow-customize/yellow-customize.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 
 
@@ -32,7 +33,8 @@ import { YellowCustomizeComponent } from './components/yellow-customize/yellow-c
     RedCustomizeComponent,
     BlueCustomizeComponent,
     GreenCustomizeComponent,
-    YellowCustomizeComponent
+    YellowCustomizeComponent,
+    SidenavComponent
   ],
 
   imports: [
