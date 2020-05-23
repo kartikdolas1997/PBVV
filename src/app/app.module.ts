@@ -20,6 +20,7 @@ import { BlueCustomizeComponent } from './components/blue-customize/blue-customi
 import { GreenCustomizeComponent } from './components/green-customize/green-customize.component';
 import { YellowCustomizeComponent } from './components/yellow-customize/yellow-customize.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -48,7 +49,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     ReactiveFormsModule,
     MatInputModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatCardModule
 
     
   ],
