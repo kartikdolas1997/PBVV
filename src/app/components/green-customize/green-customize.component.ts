@@ -11,8 +11,7 @@ export class GreenCustomizeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-onSubmit()
-{
-  
+onSubmit() {
+
 }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {EportalService} from './eportal.service'
+import {EportalService} from './eportal.service';
 
 @Component({
   selector: 'app-eportal',
@@ -9,62 +9,52 @@ import {EportalService} from './eportal.service'
 
 export class EportalComponent implements OnInit {
 
-  constructor(private _eportalservice:EportalService
+  constructor(private eportalService: EportalService
     ) { }
-
-  ngOnInit(): void {}
 
     selected = 'none';
     favoriteheadboy: string;
     favoriteheadgirl: string;
-      
     headboys;
     headgirls;
-  
 
-    
-    myFunction(){
-      console.log("myFunction called")
-      if(this.selected =="Red")
-      {
-        this.headboys = this._eportalservice.headboys_red;
-        this.headgirls = this._eportalservice.headgirls_red;
-        console.log("Red");
-        
-      }
+  ngOnInit(): void {}
 
-      else if(this.selected =="Blue")
-      {
-        this.headboys = this._eportalservice.headboys_blue;
-        this.headgirls = this._eportalservice.headgirls_blue;
-      }
 
-      else if(this.selected =="Green")
-      {
-        this.headboys = this._eportalservice.headboys_green;
-        this.headgirls = this._eportalservice.headgirls_green;
-      }
+    myFunction() {
+      console.log('myFunction called');
+      if (this.selected === 'Red') {
+        this.headboys = this.eportalService.headboys_red;
+        this.headgirls = this.eportalService.headgirls_red;
+        console.log('Red');
 
-      else if(this.selected =="Yellow")
-      {
-        this.headboys = this._eportalservice.headboys_yellow;
-        this.headgirls = this._eportalservice.headgirls_yellow;
-      }
-      else 
-      {
-        this.headboys = this._eportalservice.headboys;
-        this.headgirls = this._eportalservice.headgirls;
+      } else if (this.selected === 'Blue') {
+        this.headboys = this.eportalService.headboys_blue;
+        this.headgirls = this.eportalService.headgirls_blue;
+
+      } else if (this.selected === 'Green') {
+
+        this.headboys = this.eportalService.headboys_green;
+        this.headgirls = this.eportalService.headgirls_green;
+
+      } else if (this.selected === 'Yellow') {
+        this.headboys = this.eportalService.headboys_yellow;
+        this.headgirls = this.eportalService.headgirls_yellow;
+
+      } else {
+        this.headboys = this.eportalService.headboys;
+        this.headgirls = this.eportalService.headgirls;
       }
     }
 
     onSubmit(e) {
-      console.log("submit");
-      var vote = {
+      console.log('submit');
+      const vote = {
         house : e.value.house,
-        headboy : e.value.headboy, 
+        headboy : e.value.headboy,
         headgirl : e.value.headgirl
 
-      }
+      };
       console.log(vote);
     }
 
