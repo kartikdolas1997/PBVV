@@ -1,5 +1,6 @@
 [
-    {
+    { 
+        "id" : "Red",
         "Boys" : {
             "Boy1": {"Name":"Rboy1","Count":0},
             "Boy2": {"Name":"Rboy2","Count":0},
@@ -14,7 +15,7 @@
             "Girl4": {"Name":"Rgirl4","Count":0}
         }
     },
-    {
+    {"id" : "Blue",
         "Boys" : {
             "Boy1": {"Name":"Bboy1","Count":0},
             "Boy2": {"Name":"Bboy2","Count":0},
@@ -29,7 +30,7 @@
             "Girl4": {"Name":"Bgirl4","Count":0}
         }
     },
-    {
+    { "id" : "Green",
         "Boys" : {
             "Boy1": {"Name":"Gboy1","Count":0},
             "Boy2": {"Name":"Gboy2","Count":0},
@@ -44,7 +45,7 @@
             "Girl4": {"Name":"Ggirl4","Count":0}
         }
     },
-    {
+    {   "id" : "Yellow",
         "Boys" : {
             "Boy1": {"Name":"Yboy1","Count":0},
             "Boy2": {"Name":"Yboy2","Count":0},
