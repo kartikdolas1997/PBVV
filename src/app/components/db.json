@@ -1,0 +1,65 @@
+[
+    { 
+        "id" : "Red",
+        "Boys" : {
+            "Boy1": {"Name":"Rboy1","Count":0},
+            "Boy2": {"Name":"Rboy2","Count":0},
+            "Boy3": {"Name":"Rboy3","Count":0},
+            "Boy4": {"Name":"Rboy4","Count":0}
+    
+        },
+        "Girls":{
+            "Girl1": {"Name":"Rgirl1","Count":0},
+            "Girl2": {"Name":"Rgirl2","Count":0},
+            "Girl3": {"Name":"Rgirl3","Count":0},
+            "Girl4": {"Name":"Rgirl4","Count":0}
+        }
+    },
+    {"id" : "Blue",
+        "Boys" : {
+            "Boy1": {"Name":"Bboy1","Count":0},
+            "Boy2": {"Name":"Bboy2","Count":0},
+            "Boy3": {"Name":"Bboy3","Count":0},
+            "Boy4": {"Name":"Bboy4","Count":0}
+    
+        },
+        "Girls":{
+            "Girl1": {"Name":"Bgirl1","Count":0},
+            "Girl2": {"Name":"Bgirl2","Count":0},
+            "Girl3": {"Name":"Bgirl3","Count":0},
+            "Girl4": {"Name":"Bgirl4","Count":0}
+        }
+    },
+    { "id" : "Green",
+        "Boys" : {
+            "Boy1": {"Name":"Gboy1","Count":0},
+            "Boy2": {"Name":"Gboy2","Count":0},
+            "Boy3": {"Name":"Gboy3","Count":0},
+            "Boy4": {"Name":"Gboy4","Count":0}
+    
+        },
+        "Girls":{
+            "Girl1": {"Name":"Ggirl1","Count":0},
+            "Girl2": {"Name":"Ggirl2","Count":0},
+            "Girl3": {"Name":"Ggirl3","Count":0},
+            "Girl4": {"Name":"Ggirl4","Count":0}
+        }
+    },
+    {   "id" : "Yellow",
+        "Boys" : {
+            "Boy1": {"Name":"Yboy1","Count":0},
+            "Boy2": {"Name":"Yboy2","Count":0},
+            "Boy3": {"Name":"Yboy3","Count":0},
+            "Boy4": {"Name":"Yboy4","Count":0}
+    
+        },
+        "Girls":{
+            "Girl1": {"Name":"Ygirl1","Count":0},
+            "Girl2": {"Name":"Ygirl2","Count":0},
+            "Girl3": {"Name":"Ygirl3","Count":0},
+            "Girl4": {"Name":"Ygirl4","Count":0}
+        }
+    }
+
+   
+]

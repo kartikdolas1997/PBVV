@@ -7,12 +7,12 @@ import { HomeComponent } from './components/home/home.component';
 
 
 
-const routes : Routes = [
-  {path: '', component :HomeComponent},
-  {path: 'portal', component :EportalComponent},
-  {path: 'customize', component :CustomizeComponent},
-  {path: 'results', component :ResultsComponent}
-]
+const routes: Routes = [
+  {path: '', component : HomeComponent},
+  {path: 'portal', component : EportalComponent},
+  {path: 'customize', component : CustomizeComponent},
+  {path: 'results', component : ResultsComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

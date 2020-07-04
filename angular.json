@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "PBVV"
+  "defaultProject": "PBVV",
+  "cli": {
+    "analytics": false
+  }
 }
