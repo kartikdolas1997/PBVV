@@ -21,6 +21,8 @@ import { GreenCustomizeComponent } from './components/green-customize/green-cust
 import { YellowCustomizeComponent } from './components/yellow-customize/yellow-customize.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -50,9 +52,8 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     FormsModule,
     MatTabsModule,
-    MatCardModule
-
-    
+    MatCardModule,
+    MatTableModule
   ],
 
   providers: [],

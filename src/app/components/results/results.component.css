@@ -17,4 +17,11 @@ app-sidenav {
     background-color: blue;
     margin: 0px;
   }
-  
+  table {
+    width: 80%;
+    margin: 5%;
+    overflow: hidden; /* Hide scrollbars */
+  }
+  body {
+    overflow: hidden; /* Hide scrollbars */
+  }
