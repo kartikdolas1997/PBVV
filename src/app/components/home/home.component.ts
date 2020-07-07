@@ -17,14 +17,19 @@ export class HomeComponent implements OnInit {
   }
 
 
-  onSubmit(e){
+  onSubmit(e) {
     console.log('submitted Login Credentials');
     const credentials = {
-      Role : e.value.Role,
-      Password : e.value.Password
+      role : e.value.Role,
+      password : e.value.Password
       };
     console.log(credentials);
-    this.router.navigate(['portal']);
+    if ((this.role === 'Teacher' && this.password === 'pass1') || (this.role === 'Student' && this.password === 'pass2') ) {
+      this.router.navigate(['portal']);
+    } else {
+      alert('Password incorrect');
+      // write code to reset password
+    }
   }
 
 }

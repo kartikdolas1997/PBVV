@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
+// @Input
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
