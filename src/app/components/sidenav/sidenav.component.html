@@ -1,11 +1,11 @@
 <nav> 
     <ul>
       <!-- <li><a href="">Home</a></li> -->
-      <li><a href="portal">Portal</a></li>
-      <li><a href="customize">Customize</a></li>
-      <li><a href="results">Results</a></li>
+      <li><a [routerLink]="['/portal']">Portal</a></li>
+      <li *ngIf="role == 'Teacher'"><a [routerLink]="['/customize']">Customize</a></li>
+      <li *ngIf="role == 'Teacher'"><a [routerLink]="['/results']">Results</a></li>
     </ul>
     <br><br>
-    You are logged in as this.<br>
+    You are logged in as <b>{{role}}</b>.<br>
     Click here to logout. <a href="">Logout</a>
   </nav>

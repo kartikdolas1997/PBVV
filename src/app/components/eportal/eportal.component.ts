@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {EportalService} from './eportal.service';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-eportal',
@@ -8,8 +12,12 @@ import {EportalService} from './eportal.service';
 })
 
 export class EportalComponent implements OnInit {
+  public role;
 
-  constructor(private eportalService: EportalService
+  constructor(private eportalService: EportalService,
+              private aut: AuthenticateService,
+              private router: Router,
+              private snackBar: MatSnackBar
     ) { }
 
     selected = 'none';
@@ -18,7 +26,10 @@ export class EportalComponent implements OnInit {
     headboys;
     headgirls;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.role = this.aut.getuser();
+
+  }
 
 
     myFunction() {
@@ -56,6 +67,14 @@ export class EportalComponent implements OnInit {
 
       };
       console.log(vote);
+      // code to submit individual vote
+      this.eportalService.submitvote(vote);
+      // {
+      //   this. snackBar.openFromComponent(EportalComponent, {
+      //     duration: 2000,
+      //   });
+      // }
+      this.router.navigate(['/']);
     }
 
 }

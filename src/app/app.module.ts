@@ -22,6 +22,8 @@ import { YellowCustomizeComponent } from './components/yellow-customize/yellow-c
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -53,7 +55,9 @@ import {MatTableModule} from '@angular/material/table';
     FormsModule,
     MatTabsModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
 
   providers: [],

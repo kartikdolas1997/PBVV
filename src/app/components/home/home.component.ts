@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ export class HomeComponent implements OnInit {
   // password: String = '';
   public role;
   public password;
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private aut: AuthenticateService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
     console.log(credentials);
     if ((this.role === 'Teacher' && this.password === 'pass1') || (this.role === 'Student' && this.password === 'pass2') ) {
       this.router.navigate(['portal']);
+      this.aut.putuser(this.role);
     } else {
       alert('Password incorrect');
       // write code to reset password
