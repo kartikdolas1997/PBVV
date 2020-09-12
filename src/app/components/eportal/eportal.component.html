@@ -4,7 +4,7 @@
   <form #test="ngForm">
       <mat-form-field>
         <mat-label>Select your house</mat-label>
-        <mat-select id="mySelect" [(ngModel)]="selected" name="house" (ngModelChange)="myFunction()">
+        <mat-select id="mySelect" [(ngModel)]="selected" name="house" required (ngModelChange)="myFunction()">
           <mat-option>None</mat-option>
           <mat-option value="Red">Red</mat-option>
           <mat-option value="Blue">Blue</mat-option>
@@ -20,11 +20,11 @@
           <th>
             <!-- Headboy -->
       <label id="example-radio-group-label">Select your favorite head BOY</label>
-      <mat-radio-group
+      <mat-radio-group required
         aria-labelledby="example-radio-group-label"
         class="example-radio-group"
         [(ngModel)]="favoriteheadboy" name="headboy">
-        <mat-radio-button class="example-radio-button" *ngFor="let headboy of headboys" [value]="headboy">
+        <mat-radio-button class="example-radio-button" *ngFor="let headboy of headboys" required [value]="headboy">
           {{headboy}}
         </mat-radio-button>
       </mat-radio-group>
@@ -35,7 +35,7 @@
           <!-- Headgirl -->
 
             <label id="example-radio-group-label">Select your favorite head GIRL</label>
-            <mat-radio-group
+            <mat-radio-group required
               aria-labelledby="example-radio-group-label"
               class="example-radio-group"
               [(ngModel)]="favoriteheadgirl" name="headgirl">
@@ -50,6 +50,6 @@
 
       
     </form>
-    <button mat-raised-button (click)="onSubmit(test)">Submit</button>
+    <button mat-raised-button [disabled]=formchk() (click)="onSubmit(test)">Submit</button>
   </div>
       

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',

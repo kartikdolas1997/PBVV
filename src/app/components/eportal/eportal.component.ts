@@ -35,22 +35,22 @@ export class EportalComponent implements OnInit {
     myFunction() {
       console.log('myFunction called');
       if (this.selected === 'Red') {
-        this.headboys = this.eportalService.headboys_red;
-        this.headgirls = this.eportalService.headgirls_red;
+        this.headboys = this.eportalService.HeadBoyRed();
+        this.headgirls = this.eportalService.HeadGirlRed();
         console.log('Red');
 
       } else if (this.selected === 'Blue') {
-        this.headboys = this.eportalService.headboys_blue;
-        this.headgirls = this.eportalService.headgirls_blue;
+        this.headboys = this.eportalService.HeadBoyBlue();
+        this.headgirls = this.eportalService.HeadGirlBlue();
 
       } else if (this.selected === 'Green') {
 
-        this.headboys = this.eportalService.headboys_green;
-        this.headgirls = this.eportalService.headgirls_green;
+        this.headboys = this.eportalService.HeadBoyGreen();
+        this.headgirls = this.eportalService.HeadGirlGreen();
 
       } else if (this.selected === 'Yellow') {
-        this.headboys = this.eportalService.headboys_yellow;
-        this.headgirls = this.eportalService.headgirls_yellow;
+        this.headboys = this.eportalService.HeadBoyYellow();
+        this.headgirls = this.eportalService.HeadGirlYellow();
 
       } else {
         this.headboys = this.eportalService.headboys;
@@ -76,5 +76,8 @@ export class EportalComponent implements OnInit {
       // }
       this.router.navigate(['/']);
     }
+  formchk() {
+    
+  }
 
 }
