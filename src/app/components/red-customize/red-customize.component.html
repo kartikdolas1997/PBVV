@@ -1,63 +1,91 @@
 <form #test="ngForm">
-    <table>
-        <tr>
+  <table>
+    <tr>
+      <td>
+        <h1>Red</h1>
+        <table>
+          <tr>
             <td>
-                <h1>Red</h1>
-                <table>
-                    <tr><td><div class="example-container">
-                        <mat-form-field appearance="fill">
-                          <mat-label>Girl candidate 1</mat-label>
-                          <input matInput>
-                        </mat-form-field></div></td>
-                        <td><div class="example-container">
-                            <mat-form-field appearance="fill">
-                              <mat-label>Boy candidate 1</mat-label>
-                              <input matInput>
-                            </mat-form-field></div></td>
-                    </tr>
-                    <tr><td><div class="example-container">
-                        <mat-form-field appearance="fill">
-                          <mat-label>Girl candidate 2</mat-label>
-                          <input matInput>
-                        </mat-form-field></div></td>
-                        <td><div class="example-container">
-                            <mat-form-field appearance="fill">
-                              <mat-label>Boy candidate 2</mat-label>
-                              <input matInput>
-                            </mat-form-field></div></td>
-                    </tr>
-                    <tr><td><div class="example-container">
-                        <mat-form-field appearance="fill">
-                          <mat-label>Girl candidate 3</mat-label>
-                          <input matInput>
-                        </mat-form-field></div></td>
-                        <td><div class="example-container">
-                            <mat-form-field appearance="fill">
-                              <mat-label>Boy candidate 3</mat-label>
-                              <input matInput>
-                            </mat-form-field></div></td>
-                    </tr>
-                    <tr><td><div class="example-container">
-                        <mat-form-field appearance="fill">
-                          <mat-label>Girl candidate 4</mat-label>
-                          <input matInput>
-                        </mat-form-field></div></td>
-                        <td><div class="example-container">
-                            <mat-form-field appearance="fill">
-                              <mat-label>Boy candidate 4</mat-label>
-                              <input matInput >
-                            </mat-form-field></div></td>
-                    </tr>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Girl candidate 1</mat-label>
+                  <input [(ngModel)]="test.Red_G1" matInput required  name="Red_G1">
+                </mat-form-field>
+              </div>
+            </td>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Boy candidate 1</mat-label>
+                  <input [(ngModel)]="test.Red_B1" matInput required name="Red_B1">
+                </mat-form-field>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Girl candidate 2</mat-label>
+                  <input [(ngModel)]="test.Red_G2" matInput required name="Red_G2">
+                </mat-form-field>
+              </div>
+            </td>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Boy candidate 2</mat-label>
+                  <input [(ngModel)]="test.Red_B2" matInput required name="Red_B2">
+                </mat-form-field>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Girl candidate 3</mat-label>
+                  <input [(ngModel)]="test.Red_G3" matInput required name="Red_G3">
+                </mat-form-field>
+              </div>
+            </td>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Boy candidate 3</mat-label>
+                  <input [(ngModel)]="test.Red_B3" matInput required name="Red_B3">
+                </mat-form-field>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Girl candidate 4</mat-label>
+                  <input [(ngModel)]="test.Red_G4" matInput required name="Red_G4">
+                </mat-form-field>
+              </div>
+            </td>
+            <td>
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Boy candidate 4</mat-label>
+                  <input [(ngModel)]="test.Red_B4" matInput required name="Red_B4">
+                </mat-form-field>
+              </div>
+            </td>
+          </tr>
 
-            </table>
-</td>
-</tr>
-</table>
+        </table>
+      </td>
+    </tr>
+  </table>
 </form>
 <br>
 <span>
-  <button mat-raised-button (click)="onSubmit()">Submit</button>
+  <button mat-raised-button (click)="onSubmit(test)">Submit</button>
 </span>
 <span style="margin-left: 20px;">
-  <button mat-raised-button (click)="onSubmit()">Reset</button>
+  <button mat-raised-button (click)="onSubmit(test)">Reset</button>
 </span>

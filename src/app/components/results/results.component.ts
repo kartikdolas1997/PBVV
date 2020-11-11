@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultsService } from './results.service';
 
 export interface PeriodicElement {
   name: string;
@@ -7,12 +8,6 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-];
 
 @Component({
   selector: 'app-results',
@@ -21,8 +16,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ResultsComponent {
 
+  constructor( public resul: ResultsService) { }
+
+
+  ELEMENT_DATA: PeriodicElement[] = this.resul.fetchresults();
+
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = this.ELEMENT_DATA;
 }
 
 

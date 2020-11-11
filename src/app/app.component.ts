@@ -11,11 +11,11 @@ import 'firebase/firestore'
 })
 export class AppComponent {
   voterArr: any[];
-constructor(db: AngularFireDatabase) {
-  db.list('/VoterNode').valueChanges().subscribe(voterArr =>{
-    this.voterArr = voterArr;
-    console.log(this.voterArr);
-  });
+constructor() {
+  // db.list('/VoterNode').valueChanges().subscribe(voterArr =>{
+  //   this.voterArr = voterArr;
+  //   console.log(this.voterArr);
+  // });
 
   // To query full collection
   // db.collection('courses')

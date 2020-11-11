@@ -63,7 +63,7 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     MatSnackBarModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    // AngularFireModule.initializeApp(environment.firebase)
   ],
 
   providers: [],
