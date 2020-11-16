@@ -7,7 +7,14 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
   styleUrls: ['./red-customize.component.css']
 })
 export class RedCustomizeComponent implements OnInit {
-
+  Red_G1;
+  Red_G2;
+  Red_G3;
+  Red_G4;
+  Red_B1;
+  Red_B2;
+  Red_B3;
+  Red_B4;
   constructor(public auth: AuthenticateService) { }
 
   ngOnInit(): void {
