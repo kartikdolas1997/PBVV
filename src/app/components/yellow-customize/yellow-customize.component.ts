@@ -7,6 +7,14 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
   styleUrls: ['./yellow-customize.component.css']
 })
 export class YellowCustomizeComponent implements OnInit {
+  Yellow_G1;
+  Yellow_G2;
+  Yellow_G3;
+  Yellow_G4;
+  Yellow_B1;
+  Yellow_B2;
+  Yellow_B3;
+  Yellow_B4;
 
   constructor(public auth: AuthenticateService) { }
 
@@ -23,6 +31,14 @@ export class YellowCustomizeComponent implements OnInit {
       B3: e.value.Yellow_B3,
       B4: e.value.Yellow_B4,
     };
-    this.auth.submitnomin(newYellow).subscribe();
+    console.log(newYellow);
+    this.auth.submitnominYellow(newYellow).subscribe(
+      () => {
+        // this.router.navigate(['/link']);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }

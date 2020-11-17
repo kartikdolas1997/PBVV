@@ -18,7 +18,11 @@ export class AuthenticateService {
   submitnomin(inpobj) {
     // used to submit candidate names for first time
     console.log(inpobj);
-    
     return this.http.post('http://localhost:3000/api/customize/red', inpobj);
+  }
+  submitnominYellow(inpobj) {
+    // used to submit candidate names for first time
+    console.log(inpobj);
+    return this.http.post('http://localhost:3000/api/customize/yellow', inpobj);
   }
 }
