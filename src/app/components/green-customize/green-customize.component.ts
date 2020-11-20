@@ -33,7 +33,7 @@ export class GreenCustomizeComponent implements OnInit {
     };
     console.log(newGreen);
 
-    this.auth.submitnomin(newGreen).subscribe(
+    this.auth.submitnominGreen(newGreen).subscribe(
       () => {
         // this.router.navigate(['/link']);
       },

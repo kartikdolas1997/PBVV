@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blue-customize',
@@ -7,6 +8,7 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
   styleUrls: ['./blue-customize.component.css']
 })
 export class BlueCustomizeComponent implements OnInit {
+  role;
   Blue_G1;
   Blue_G2;
   Blue_G3;
@@ -16,9 +18,14 @@ export class BlueCustomizeComponent implements OnInit {
   Blue_B3;
   Blue_B4;
 
-  constructor(private auth: AuthenticateService) { }
+  constructor(private auth: AuthenticateService,
+              private router: Router) { }
 
   ngOnInit(): void {
+    this.role = this.auth.getuser();
+    if(this.role ===  undefined) {
+      this.router.navigate(['/']);
+    }
   }
   onSubmit(e) {
     const newBlue = {
@@ -32,7 +39,7 @@ export class BlueCustomizeComponent implements OnInit {
       B4: e.value.Blue_B4,
     };
     console.log(newBlue);
-    this.auth.submitnomin(newBlue).subscribe(
+    this.auth.submitnominBlue(newBlue).subscribe(
       () => {
         // this.router.navigate(['/link']);
       },

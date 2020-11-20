@@ -28,6 +28,9 @@ export class EportalComponent implements OnInit {
 
   ngOnInit(): void {
     this.role = this.aut.getuser();
+    if(this.role ===  undefined) {
+      this.router.navigate(['/']);
+    }
 
   }
 
@@ -74,10 +77,11 @@ export class EportalComponent implements OnInit {
       //     duration: 2000,
       //   });
       // }
-      this.router.navigate(['/']);
+
+      // this.router.navigate(['/']);
     }
   formchk() {
-    
+
   }
 
 }

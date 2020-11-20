@@ -8,10 +8,10 @@ export class ResultsService {
   constructor() { }
   fetchresults() {
     const Res = [
-      {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-      {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-      {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-      {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+      {position: 1, name: 'Hydrogen', votes: 12},
+      {position: 2, name: 'Helium', votes: 40},
+      {position: 3, name: 'Lithium', votes: 69},
+      {position: 4, name: 'Beryllium', votes: 90},
     ];
     return Res;
   }
