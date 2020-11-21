@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResultsService {
 
-  constructor() { }
-  fetchresults() {
-    const Res = [
-      {position: 1, name: 'Hydrogen', votes: 12},
-      {position: 2, name: 'Helium', votes: 40},
-      {position: 3, name: 'Lithium', votes: 69},
-      {position: 4, name: 'Beryllium', votes: 90},
-    ];
-    return Res;
+  constructor(private http: HttpClient) { }
+  fetchresults(color, gender) {
+    console.log(this.http.get('http://localhost:3000/api/results/' + color + '/' + gender));
+    return this.http.get('http://localhost:3000/api/results/' + color + '/' + gender);
   }
+
 
 }
