@@ -9,7 +9,6 @@ export class ResultsService {
 
   constructor(private http: HttpClient) { }
   fetchresults(color, gender) {
-    console.log(this.http.get('http://localhost:3000/api/results/' + color + '/' + gender));
     return this.http.get('http://localhost:3000/api/results/' + color + '/' + gender);
   }
 
