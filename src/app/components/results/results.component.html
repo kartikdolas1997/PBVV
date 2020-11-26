@@ -13,7 +13,7 @@
     
       <!-- votes Column -->
       <ng-container matColumnDef="votes">
-        <th mat-header-cell *matHeaderCellDef> votes <a> <mat-icon [ngStyle]="{'color':'Red'}">cancel_presentation</mat-icon></a></th>
+        <th mat-header-cell *matHeaderCellDef> votes <a> <mat-icon [ngStyle]="{'color':'Red'}" (click)="Del('red','boy')">cancel_presentation</mat-icon></a></th>
         <td mat-cell *matCellDef="let element"> {{element.no_of_votes}} </td>
       </ng-container>
     

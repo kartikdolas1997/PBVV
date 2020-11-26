@@ -27,7 +27,7 @@ export class EportalComponent implements OnInit {
   favoriteheadgirl: string;
   headboys;
   headgirls;
-  DataRedMale;
+  // DataRedMale;
 
   ngOnInit(): void {
     this.role = this.aut.getuser();
@@ -35,18 +35,18 @@ export class EportalComponent implements OnInit {
       this.router.navigate(['/']);
     }
 
-    console.log(this.DataRedMale);
+    // console.log(this.DataRedMale);
 
-    const DataRedFemale = this.resl.fetchresults('red', 'female');
+    // const DataRedFemale = this.resl.fetchresults('red', 'female');
 
-    const DataYellowMale = this.resl.fetchresults('yellow', 'male');
-    const DataYellowFemale = this.resl.fetchresults('yellow', 'female');
+    // const DataYellowMale = this.resl.fetchresults('yellow', 'male');
+    // const DataYellowFemale = this.resl.fetchresults('yellow', 'female');
 
-    const DataBlueMale = this.resl.fetchresults('blue', 'male');
-    const DataBlueFemale = this.resl.fetchresults('blue', 'female');
+    // const DataBlueMale = this.resl.fetchresults('blue', 'male');
+    // const DataBlueFemale = this.resl.fetchresults('blue', 'female');
 
-    const DataGreenMale = this.resl.fetchresults('green', 'male');
-    const DataGreenFemale = this.resl.fetchresults('green', 'female');
+    // const DataGreenMale = this.resl.fetchresults('green', 'male');
+    // const DataGreenFemale = this.resl.fetchresults('green', 'female');
 
 
   }
