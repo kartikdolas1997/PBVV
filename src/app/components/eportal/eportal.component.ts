@@ -16,10 +16,10 @@ export class EportalComponent implements OnInit {
   public role;
 
   constructor(private eportalService: EportalService,
-    private aut: AuthenticateService,
-    private router: Router,
-    private snackBar: MatSnackBar,
-    private resl: ResultsService
+              private aut: AuthenticateService,
+              private router: Router,
+              private snackBar: MatSnackBar,
+              private resl: ResultsService
   ) { }
 
   selected = 'none';

@@ -44,8 +44,7 @@ export class EportalService {
 
   submitvote(inp) {
     // code to caste voter's vote.
-    console.log('Cast vote API', JSON.stringify(inp));
-    return this.http.post('url/api/index/endpoint', inp);
-    // return this.http.post('localhost:4200/api/submit-vote', inp);
+    // console.log('Cast vote API', JSON.stringify(inp));
+    return this.http.post('http://localhost:3000/api/submitevote/vote', inp);
   }
 }

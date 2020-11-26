@@ -25,6 +25,7 @@ import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
+import {MatIconModule} from '@angular/material/icon';
 import { AngularFireModule} from 'angularfire2';
 import { environment } from 'src/environments/environment';
 
@@ -63,6 +64,7 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     MatSnackBarModule,
     AngularFireDatabaseModule,
+    MatIconModule
     // AngularFireModule.initializeApp(environment.firebase)
   ],
 

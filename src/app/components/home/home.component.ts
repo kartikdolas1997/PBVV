@@ -36,4 +36,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  btndisable(e) {
+    if (e.valid) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 }
