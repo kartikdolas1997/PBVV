@@ -53,12 +53,20 @@ export class ResultsComponent implements OnInit {
     }
 
   }
-  Del(col,gen) {
-    const inpobj ={
+  Del(col, gen) {
+    const inpobj = {
       color : col,
       gender : gen,
-    }
-    this.resul.Deletevote(inpobj);
+    };
+    this.resul.Deletevote(inpobj)
+    .subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
 
   }
 
