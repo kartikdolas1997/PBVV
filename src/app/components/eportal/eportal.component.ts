@@ -16,10 +16,10 @@ export class EportalComponent implements OnInit {
   public role;
 
   constructor(private eportalService: EportalService,
-              private aut: AuthenticateService,
-              private router: Router,
-              private snackBar: MatSnackBar,
-              private resl: ResultsService
+    private aut: AuthenticateService,
+    private router: Router,
+    private snackBar: MatSnackBar,
+    private resl: ResultsService
   ) { }
 
   selected = 'none';
@@ -108,16 +108,42 @@ export class EportalComponent implements OnInit {
       headgirl: e.value.headgirl,
     };
     console.log(vote);
-    // code to submit individual vote
-    this.eportalService.submitvote(vote);
-    // {
-    //   this. snackBar.openFromComponent(EportalComponent, {
-    //     duration: 2000,
-    //   });
-    // }
 
-    // this.router.navigate(['/']);
+    // openSnackBar(message: string, action: string) {
+    if (this.role === 'Student') {
+      this.snackBar.open('Submitted Successfully', 'Logging out', {
+        duration: 2000,
+      });
+
+    }
+    this.playAudio();
+    this.eportalService.submitvote(vote)
+      .subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+
+    if (this.role === 'Student') {
+      this.router.navigate(['/']);
+      console.log(this.role);
+    }
   }
-
+  btndisable(e) {
+    if (e.valid) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  playAudio(){
+    let audio = new Audio();
+    audio.src = '../../../assets/long.mp3';
+    audio.load();
+    audio.play();
+  }
 
 }

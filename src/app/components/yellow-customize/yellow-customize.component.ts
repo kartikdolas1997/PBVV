@@ -41,4 +41,7 @@ export class YellowCustomizeComponent implements OnInit {
       }
     );
   }
+  ClearForm(e) {
+    e.resetForm();
+  }
 }

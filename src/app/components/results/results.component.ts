@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ResultsService } from './results.service';
 import { Router } from '@angular/router';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
+import {Sort} from '@angular/material/sort';
+
 
 // export interface PeriodicElement {
 //   name: string;
@@ -67,9 +69,27 @@ export class ResultsComponent implements OnInit {
         console.error(error);
       }
     );
+    this.dataSourceRedMale = this.resul.fetchresults('red', 'male');
+    this.dataSourceRedFemale = this.resul.fetchresults('red', 'female');
+
+    this.dataSourceYellowMale = this.resul.fetchresults('yellow', 'male');
+    this.dataSourceYellowFemale = this.resul.fetchresults('yellow', 'female');
+
+    this.dataSourceBlueMale = this.resul.fetchresults('blue', 'male');
+    this.dataSourceBlueFemale = this.resul.fetchresults('blue', 'female');
+
+    this.dataSourceGreenMale = this.resul.fetchresults('green', 'male');
+    this.dataSourceGreenFemale = this.resul.fetchresults('green', 'female');
 
   }
 
+//   sortData(sort: Sort) {
+//     const data = this.sortedData.slice();
+//     if (!sort.active || sort.direction === '') {
+//       this.sortedData = data;
+//       return;
+//     }
+
+// }
+
 }
-
-

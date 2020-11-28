@@ -41,4 +41,8 @@ export class GreenCustomizeComponent implements OnInit {
         console.log(error);
       }
     );
-}}
+}
+ClearForm(e) {
+  e.resetForm();
+}
+}

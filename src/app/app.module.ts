@@ -28,6 +28,8 @@ import { AngularFireDatabaseModule} from 'angularfire2/database';
 import {MatIconModule} from '@angular/material/icon';
 import { AngularFireModule} from 'angularfire2';
 import { environment } from 'src/environments/environment';
+import {MatSortModule} from '@angular/material/sort';
+
 
 
 
@@ -64,8 +66,8 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     MatSnackBarModule,
     AngularFireDatabaseModule,
-    MatIconModule
-    // AngularFireModule.initializeApp(environment.firebase)
+    MatIconModule,
+    MatSortModule
   ],
 
   providers: [],

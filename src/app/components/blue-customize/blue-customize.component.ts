@@ -48,5 +48,7 @@ export class BlueCustomizeComponent implements OnInit {
       }
     );
   }
-
+  ClearForm(e) {
+    e.resetForm();
+  }
 }

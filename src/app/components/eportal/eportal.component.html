@@ -4,13 +4,16 @@
   <form #test="ngForm">
       <mat-form-field>
         <mat-label>Select your house</mat-label>
-        <mat-select id="mySelect" [(ngModel)]="selected" name="house" required (ngModelChange)="myFunction()">
+        <mat-select id="mySelect" [(ngModel)]="selected" name="house" required (ngModelChange)="myFunction()" #housefield=ngModel>
           <mat-option>None</mat-option>
           <mat-option value="Red">Red</mat-option>
           <mat-option value="Blue">Blue</mat-option>
           <mat-option value="Green">Green</mat-option>
           <mat-option value="Yellow">Yellow</mat-option>
         </mat-select>
+        <mat-error>
+          <div *ngIf = "housefield.errors?.required">It is mandatory.</div>
+        </mat-error>
       </mat-form-field>
       
       <p>You selected: {{selected}}</p><br>
@@ -50,6 +53,11 @@
 
       
     </form>
-    <button mat-raised-button (click)="onSubmit(test)">Submit</button>
+    <button mat-raised-button (click)="onSubmit(test)" [disabled]=btndisable(test)>Submit</button>
+    <br><br>
+    <span *ngIf="role =='Teacher'">
+      <b><u>Note:</u></b><br>
+      When teacher submits vote for testing, he/she has to go in results section to check by his/her own.
+    </span>
   </div>
-      
+

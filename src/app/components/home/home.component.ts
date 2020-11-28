@@ -9,9 +9,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  // role: String = '';
-  // password: String = '';
-  public role;
+
+  public role = undefined;
   public password;
   constructor(private router: Router,
               private aut: AuthenticateService) { }
@@ -33,6 +32,7 @@ export class HomeComponent implements OnInit {
     } else {
       alert('Password incorrect');
       // write code to reset password
+      this.ClearForm(e);
     }
   }
 
@@ -42,6 +42,10 @@ export class HomeComponent implements OnInit {
     } else {
       return true;
     }
+  }
+
+  ClearForm(e) {
+    e.resetForm();
   }
 
 }

@@ -40,4 +40,14 @@ export class RedCustomizeComponent implements OnInit {
       }
     );
   }
+  ClearForm(e) {
+    e.resetForm();
+  }
+  btndisable(e) {
+    if (e.valid) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
