@@ -9,7 +9,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Girl candidate 1</mat-label>
-                  <input [(ngModel)]="Red_G1" matInput required #RedG1field = "ngModel"  name="Red_G1">
+                  <input [(ngModel)]="Red_G1" matInput required #RedG1field = "ngModel"  name="Red_G1" #redg1field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redg1field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -84,7 +87,7 @@
 </form>
 <br>
 <span>
-  <button mat-raised-button (click)="onSubmit(test)" [disabled]=btndisable(test)>Submit</button>
+  <button mat-raised-button color="primary" (click)="onSubmit(test)" [disabled]=btndisable(test)>Submit</button>
 </span>
 <span style="margin-left: 20px;">
   <button mat-raised-button (click)="ClearForm(test)">Reset</button>

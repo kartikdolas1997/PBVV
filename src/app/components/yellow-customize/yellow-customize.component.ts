@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-yellow-customize',
@@ -16,7 +17,9 @@ export class YellowCustomizeComponent implements OnInit {
   Yellow_B3;
   Yellow_B4;
 
-  constructor(public auth: AuthenticateService) { }
+  constructor(public auth: AuthenticateService,
+              private snackBar: MatSnackBar,
+    ) { }
 
   ngOnInit(): void {
   }
@@ -32,9 +35,12 @@ export class YellowCustomizeComponent implements OnInit {
       B4: e.value.Yellow_B4,
     };
     console.log(newYellow);
-    this.auth.submitnominYellow(newYellow).subscribe(
-      () => {
-        // this.router.navigate(['/link']);
+    this.auth.submitnomin(newYellow).subscribe(
+      (res) => {
+        console.log(res);
+        this.snackBar.open('Submitted Successfully', '', {
+          duration: 2000,
+        });
       },
       error => {
         console.log(error);

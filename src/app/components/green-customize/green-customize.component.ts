@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-green-customize',
@@ -16,7 +17,9 @@ export class GreenCustomizeComponent implements OnInit {
   Green_B3;
   Green_B4;
 
-  constructor(public auth: AuthenticateService) { }
+  constructor(public auth: AuthenticateService,
+              private snackBar: MatSnackBar,
+    ) { }
 
   ngOnInit(): void {
   }
@@ -33,9 +36,12 @@ export class GreenCustomizeComponent implements OnInit {
     };
     console.log(newGreen);
 
-    this.auth.submitnominGreen(newGreen).subscribe(
-      () => {
-        // this.router.navigate(['/link']);
+    this.auth.submitnomin(newGreen).subscribe(
+      (res) => {
+        console.log(res);
+        this.snackBar.open('Submitted Successfully', '', {
+          duration: 2000,
+        });
       },
       error => {
         console.log(error);

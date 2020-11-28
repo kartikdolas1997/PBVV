@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-blue-customize',
@@ -19,11 +20,12 @@ export class BlueCustomizeComponent implements OnInit {
   Blue_B4;
 
   constructor(private auth: AuthenticateService,
-              private router: Router) { }
+              private router: Router,
+              private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.role = this.auth.getuser();
-    if(this.role ===  undefined) {
+    if (this.role === undefined) {
       this.router.navigate(['/']);
     }
   }
@@ -39,9 +41,12 @@ export class BlueCustomizeComponent implements OnInit {
       B4: e.value.Blue_B4,
     };
     console.log(newBlue);
-    this.auth.submitnominBlue(newBlue).subscribe(
-      () => {
-        // this.router.navigate(['/link']);
+    this.auth.submitnomin(newBlue).subscribe(
+      (res) => {
+        console.log(res);
+        this.snackBar.open('Submitted Successfully', '', {
+          duration: 2000,
+        });
       },
       error => {
         console.log(error);

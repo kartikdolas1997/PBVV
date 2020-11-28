@@ -110,12 +110,12 @@ export class EportalComponent implements OnInit {
     console.log(vote);
 
     // openSnackBar(message: string, action: string) {
-    if (this.role === 'Student') {
-      this.snackBar.open('Submitted Successfully', 'Logging out', {
-        duration: 2000,
-      });
+    // if (this.role === 'Student') {
+    this.snackBar.open('Submitted Successfully', '', {
+      duration: 5000,
+    });
 
-    }
+    // }
     this.playAudio();
     this.eportalService.submitvote(vote)
       .subscribe(
@@ -139,7 +139,7 @@ export class EportalComponent implements OnInit {
       return true;
     }
   }
-  playAudio(){
+  playAudio() {
     let audio = new Audio();
     audio.src = '../../../assets/long.mp3';
     audio.load();

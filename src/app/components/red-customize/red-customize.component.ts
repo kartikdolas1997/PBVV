@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-red-customize',
@@ -15,7 +16,9 @@ export class RedCustomizeComponent implements OnInit {
   Red_B2;
   Red_B3;
   Red_B4;
-  constructor(public auth: AuthenticateService) { }
+  constructor(public auth: AuthenticateService,
+              private snackBar: MatSnackBar,
+    ) { }
 
   ngOnInit(): void {
   }
@@ -32,8 +35,11 @@ export class RedCustomizeComponent implements OnInit {
     };
     console.log(newRed);
     this.auth.submitnomin(newRed).subscribe(
-      () => {
-        // this.router.navigate(['/link']);
+      (res) => {
+        console.log(res);
+        this.snackBar.open('Submitted Successfully', '', {
+          duration: 2000,
+        });
       },
       error => {
         console.log(error);
