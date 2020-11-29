@@ -20,7 +20,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Boy candidate 1</mat-label>
-                  <input [(ngModel)]="Red_B1" matInput #RedB1field = "ngModel" required name="Red_B1">
+                  <input [(ngModel)]="Red_B1" matInput #RedB1field = "ngModel" required name="Red_B1" #redb1field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redb1field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -30,7 +33,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Girl candidate 2</mat-label>
-                  <input [(ngModel)]="Red_G2" matInput #RedG2field = "ngModel" required name="Red_G2">
+                  <input [(ngModel)]="Red_G2" matInput #RedG2field = "ngModel" required name="Red_G2" #redg2field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redg2field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -38,7 +44,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Boy candidate 2</mat-label>
-                  <input [(ngModel)]="Red_B2" matInput #RedB2field = "ngModel" required name="Red_B2">
+                  <input [(ngModel)]="Red_B2" matInput #RedB2field = "ngModel" required name="Red_B2" #redb2field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redb2field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -48,7 +57,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Girl candidate 3</mat-label>
-                  <input [(ngModel)]="Red_G3" matInput #RedG3field = "ngModel" required name="Red_G3">
+                  <input [(ngModel)]="Red_G3" matInput #RedG3field = "ngModel" required name="Red_G3" #redg3field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redg3field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -56,7 +68,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Boy candidate 3</mat-label>
-                  <input [(ngModel)]="Red_B3" matInput required #RedB3field = "ngModel" name="Red_B3">
+                  <input [(ngModel)]="Red_B3" matInput required #RedB3field = "ngModel" name="Red_B3" #redb3field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redb3field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -66,7 +81,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Girl candidate 4</mat-label>
-                  <input [(ngModel)]="Red_G4" matInput #RedG4field = "ngModel" required name="Red_G4">
+                  <input [(ngModel)]="Red_G4" matInput #RedG4field = "ngModel" required name="Red_G4" #redg4field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redg4field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>
@@ -74,7 +92,10 @@
               <div class="example-container">
                 <mat-form-field appearance="fill">
                   <mat-label>Boy candidate 4</mat-label>
-                  <input [(ngModel)]="Red_B4" matInput #RedB4field = "ngModel" required name="Red_B4">
+                  <input [(ngModel)]="Red_B4" matInput #RedB4field = "ngModel" required name="Red_B4" #redb4field="ngModel">
+                  <mat-error>
+                    <div *ngIf = "redb4field.errors?.required">It is mandatory.</div>
+                  </mat-error>
                 </mat-form-field>
               </div>
             </td>

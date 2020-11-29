@@ -9,7 +9,8 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
 })
 
 export class SidenavComponent implements OnInit {
-  public role;
+  role;
+  VarName;
   constructor(private aut: AuthenticateService) { }
 
   ngOnInit(): void {
@@ -17,5 +18,8 @@ export class SidenavComponent implements OnInit {
       this.aut.putuser(this.role);
 
   }
-
+  selected(inp) {
+    console.log(inp);
+    this.VarName = inp;
+  }
 }
