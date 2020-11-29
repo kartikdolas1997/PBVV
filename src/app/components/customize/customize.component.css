@@ -25,7 +25,7 @@ table {
   app-sidenav {
     float: left;
     width: 10%;
-    height: 938px; 
+    height: 757px; 
     background: #ccc;
     padding: 0px;
   }
@@ -34,7 +34,7 @@ table {
     padding: 10px;
     width: 90%;
     background-color: #f1f1f1;
-    height: 938px;  /* only for demonstration, should be removed */
+    height: 757px;  /* only for demonstration, should be removed */
   }
 
   h1 {
