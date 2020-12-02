@@ -22,11 +22,11 @@ export class HomeComponent implements OnInit {
   onSubmit(e) {
     console.log('submitted Login Credentials');
     const credentials = {
-      role : e.value.Role,
+      role : e.value.role,
       password : e.value.Password
       };
     console.log(credentials);
-    if ((this.role === 'Teacher' && this.password === 'pass1') || (this.role === 'Student' && this.password === 'pass2') ) {
+    if ((e.role === 'Teacher' && e.password === 'pass1') || (e.role === 'Student' && e.password === 'pass2') ) {
       this.router.navigate(['portal']);
       this.aut.putuser(this.role);
     } else {

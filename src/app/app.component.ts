@@ -12,17 +12,6 @@ import 'firebase/firestore'
 export class AppComponent {
   voterArr: any[];
 constructor() {
-  // db.list('/VoterNode').valueChanges().subscribe(voterArr =>{
-  //   this.voterArr = voterArr;
-  //   console.log(this.voterArr);
-  // });
 
-  // To query full collection
-  // db.collection('courses')
-  // .get()
-  // .then(snaps =>{
-  //   console.log(snaps.docs.map(snap=>snap.id))
-  // }
-  //   );
 }
 }
