@@ -4,16 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyCNJdWwwTUmJOAtQ5acvp_k06JJ79Wj-No",
-    authDomain: "voterbot-fe884.firebaseapp.com",
-    databaseURL: "https://voterbot-fe884.firebaseio.com",
-    projectId: "voterbot-fe884",
-    storageBucket: "voterbot-fe884.appspot.com",
-    messagingSenderId: "116816838066",
-    appId: "1:116816838066:web:dbce3030feab98af68b8ab"
-  },
-  // firebase.initializeApp(firebaseConfig)
+  apiUrl: 'http://localhost:3000',
 };
 
 /*

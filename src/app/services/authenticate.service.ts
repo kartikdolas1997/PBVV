@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,18 +18,18 @@ export class AuthenticateService {
 
   submitnomin(inpobj) {
     console.log(inpobj);
-    return this.http.post('http://localhost:3000/api/customize/red', inpobj);
+    return this.http.post(environment.apiUrl + '/api/customize/red', inpobj);
   }
   submitnominYellow(inpobj) {
     console.log(inpobj);
-    return this.http.post('http://localhost:3000/api/customize/yellow', inpobj);
+    return this.http.post(environment.apiUrl + '/api/customize/yellow', inpobj);
   }
   submitnominBlue(inpobj) {
     console.log(inpobj);
-    return this.http.post('http://localhost:3000/api/customize/blue', inpobj);
+    return this.http.post(environment.apiUrl + '/api/customize/blue', inpobj);
   }
   submitnominGreen(inpobj) {
     console.log(inpobj);
-    return this.http.post('http://localhost:3000/api/customize/green', inpobj);
+    return this.http.post(environment.apiUrl + '/api/customize/green', inpobj);
   }
 }

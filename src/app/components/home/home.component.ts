@@ -9,7 +9,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   public role = undefined;
   public password;
   constructor(private router: Router,
@@ -22,19 +21,23 @@ export class HomeComponent implements OnInit {
   onSubmit(e) {
     console.log('submitted Login Credentials');
     const credentials = {
-      role : e.value.role,
-      password : e.value.Password
+      Role : e.value.role,
+      Password : e.value.password
       };
     console.log(credentials);
-    if ((e.role === 'Teacher' && e.password === 'pass1') || (e.role === 'Student' && e.password === 'pass2') ) {
+    if ((e.value.role == 'Teacher' && e.value.password == 'pass1') || (e.value.role == 'Student' && e.value.password == 'pass2') ) {
       this.router.navigate(['portal']);
-      this.aut.putuser(this.role);
+      this.aut.putuser(credentials.Role);
     } else {
       alert('Password incorrect');
-      // write code to reset password
       this.ClearForm(e);
     }
   }
+
+  // dumy(e) {
+  //   console.log('i am dummy');
+  //   alert('i am dummy');
+  // }
 
   btndisable(e) {
     if (e.valid) {

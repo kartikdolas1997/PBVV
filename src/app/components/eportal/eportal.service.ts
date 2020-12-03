@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,6 @@ export class EportalService {
   submitvote(inp) {
     // code to caste voter's vote.
     // console.log('Cast vote API', JSON.stringify(inp));
-    return this.http.post('http://localhost:3000/api/submitevote/vote', inp);
+    return this.http.post(environment.apiUrl + '/api/submitevote/vote', inp);
   }
 }
