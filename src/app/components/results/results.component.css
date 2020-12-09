@@ -8,7 +8,7 @@ app-sidenav {
   .mainground {
     float: left;
     padding: 10px;
-    width: 90%;
+    width: 55%;
     background-color: #f1f1f1;
     height: 757px; /* only for demonstration, should be removed */
   }
@@ -22,6 +22,6 @@ app-sidenav {
     margin: 5%;
     overflow: hidden; /* Hide scrollbars */
   }
-  body {
-    overflow: hidden; /* Hide scrollbars */
-  }
+  /* style {
+    width: 900px;
+  } */
