@@ -46,7 +46,7 @@ import {MatSortModule} from '@angular/material/sort';
     BlueCustomizeComponent,
     GreenCustomizeComponent,
     YellowCustomizeComponent,
-    SidenavComponent
+    SidenavComponent,
   ],
 
   imports: [

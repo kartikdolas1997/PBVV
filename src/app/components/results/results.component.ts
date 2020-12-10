@@ -5,12 +5,6 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
 import {Sort} from '@angular/material/sort';
 
 
-// export interface PeriodicElement {
-//   name: string;
-//   position: number;
-//   votes: number;
-// }
-
 
 @Component({
   selector: 'app-results',
@@ -60,15 +54,20 @@ export class ResultsComponent implements OnInit {
       color : col,
       gender : gen,
     };
-    this.resul.Deletevote(inpobj)
-    .subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    // this.clickMethod()
+    if(confirm("Are you sure to delete? ")) {
+      console.log("Implement delete functionality here");
+      this.resul.Deletevote(inpobj)
+      .subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    }
+
     this.dataSourceRedMale = this.resul.fetchresults('red', 'male');
     this.dataSourceRedFemale = this.resul.fetchresults('red', 'female');
 
@@ -82,14 +81,7 @@ export class ResultsComponent implements OnInit {
     this.dataSourceGreenFemale = this.resul.fetchresults('green', 'female');
 
   }
+  clickMethod() {
 
-//   sortData(sort: Sort) {
-//     const data = this.sortedData.slice();
-//     if (!sort.active || sort.direction === '') {
-//       this.sortedData = data;
-//       return;
-//     }
-
-// }
-
+  }
 }
