@@ -1,7 +1,7 @@
 <h1>Election Portal</h1>
 <app-sidenav></app-sidenav>
   <div class="mainground">
-  <form #test="ngForm">
+  <form #test="ngForm" id="stu">
       <mat-form-field>
         <mat-label>Select your house</mat-label>
         <mat-select id="mySelect" [(ngModel)]="selected" name="house" required (ngModelChange)="myFunction()" #housefield=ngModel>

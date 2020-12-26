@@ -5,6 +5,9 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ResultsService } from '../results/results.service';
 import { map } from 'rxjs/operators';
+import { TestBed } from '@angular/core/testing';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-eportal',
@@ -124,11 +127,12 @@ export class EportalComponent implements OnInit {
           console.error(error);
         }
       );
-
-    if (this.role === 'Student') {
-      this.router.navigate(['/']);
-      console.log(this.role);
-    }
+      (<HTMLFormElement>document.getElementById("stu")).reset();
+      this.fontColor=null;
+    // if (this.role === 'Student') {
+    //   this.router.navigate(['/']);
+    //   console.log(this.role);
+    // }
   }
   btndisable(e) {
     if (e.valid) {
