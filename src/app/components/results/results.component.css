@@ -14,8 +14,9 @@ app-sidenav {
   }
 
   h1 {
-    background-color: #FF4500;
+    background-color: grey;
     margin: 0px;
+    color: white;
   }
   table {
     width: 80%;

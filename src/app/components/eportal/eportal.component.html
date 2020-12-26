@@ -16,7 +16,7 @@
         </mat-error>
       </mat-form-field>
       
-      <p>You selected: {{selected}}</p><br>
+      <p [ngStyle]="{backgroundColor:fontColor}" style="color: white; font-weight: bold;">You selected: {{selected}}</p><br>
 
       <table>
         <tr>
@@ -28,7 +28,7 @@
         class="example-radio-group"
         [(ngModel)]="favoriteheadboy" name="headboy">
         <mat-radio-button class="example-radio-button" *ngFor="let headboy of headboys" required [value]="headboy">
-          {{headboy}}
+          <span [ngStyle]="{color: fontColor}">{{headboy}}</span>
         </mat-radio-button>
       </mat-radio-group>
       <div>Your favorite headboy is: {{favoriteheadboy}}</div>
@@ -43,7 +43,7 @@
               class="example-radio-group"
               [(ngModel)]="favoriteheadgirl" name="headgirl">
               <mat-radio-button class="example-radio-button" *ngFor="let headgirl of headgirls" [value]="headgirl">
-                {{headgirl}}
+                <span [ngStyle]="{color: fontColor}">{{headgirl}}</span>
               </mat-radio-button>
             </mat-radio-group>
             <div>Your favorite headgirl is: {{favoriteheadgirl}}</div>

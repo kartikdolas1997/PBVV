@@ -2,9 +2,9 @@
     <ul>
       <!-- <li><a href="">Home</a></li> -->
       <li><mat-icon [routerLink]="['/portal']" (click)="selected('portal')" [ngStyle]="{'color':VarName==='portal'?'blue':''}">how_to_vote</mat-icon>Election Portal</li>
-      <li><mat-icon *ngIf="role == 'Teacher'" [routerLink]="['/customize']" (click)="selected('customize')" [ngStyle]="{'color':VarName==='customize'?'blue':''}">build</mat-icon>Customize</li>
+      <li *ngIf="role == 'Teacher'"><mat-icon  [routerLink]="['/customize']" (click)="selected('customize')" [ngStyle]="{'color':VarName==='customize'?'blue':''}">build</mat-icon>Customize</li>
       <!-- <li *ngIf="role == 'Teacher'"><a [routerLink]="['/results']" (click)="selected('results')" [ngStyle]="{'color':VarName==='results'?'blue':''}">Results</a></li> -->
-      <li><mat-icon *ngIf="role == 'Teacher'" [routerLink]="['/results']" (click)="selected('results')" [ngStyle]="{'color':VarName==='results'?'blue':''}">list_alt</mat-icon>Results</li>
+      <li *ngIf="role == 'Teacher'"><mat-icon [routerLink]="['/results']" (click)="selected('results')" [ngStyle]="{'color':VarName==='results'?'blue':''}">list_alt</mat-icon>Results</li>
     </ul>
     <br><br>
     You are logged in as <b>{{role}}</b>.<br>

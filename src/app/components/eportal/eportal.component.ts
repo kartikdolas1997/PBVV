@@ -27,6 +27,7 @@ export class EportalComponent implements OnInit {
   favoriteheadgirl: string;
   headboys;
   headgirls;
+  fontColor;
   // DataRedMale;
 
   ngOnInit(): void {
@@ -35,25 +36,25 @@ export class EportalComponent implements OnInit {
       this.router.navigate(['/']);
     }
 
-    // console.log(this.DataRedMale);
+  }
+  textColor(inp){
+    console.log('from textcolor',inp);
+    
+    switch(inp){
+      case 'Red': this.fontColor='#ff0000'; break;
+      case 'Blue': this.fontColor='#0000ff'; break;
+      case 'Green': this.fontColor='#006600'; break;
+      case 'Yellow': this.fontColor='#cccc00'; break;
+      default: console.log('invalid color'); break;
+      
 
-    // const DataRedFemale = this.resl.fetchresults('red', 'female');
-
-    // const DataYellowMale = this.resl.fetchresults('yellow', 'male');
-    // const DataYellowFemale = this.resl.fetchresults('yellow', 'female');
-
-    // const DataBlueMale = this.resl.fetchresults('blue', 'male');
-    // const DataBlueFemale = this.resl.fetchresults('blue', 'female');
-
-    // const DataGreenMale = this.resl.fetchresults('green', 'male');
-    // const DataGreenFemale = this.resl.fetchresults('green', 'female');
-
-
+    }
   }
 
 
   myFunction() {
     console.log('myFunction called');
+    this.textColor(this.selected);
     if (this.selected === 'Red') {
       this.resl.fetchresults('red', 'male').subscribe((data: any) => {
         this.headboys = data.map(a => a.names);
@@ -108,9 +109,6 @@ export class EportalComponent implements OnInit {
       headgirl: e.value.headgirl,
     };
     console.log(vote);
-
-    // openSnackBar(message: string, action: string) {
-    // if (this.role === 'Student') {
     this.snackBar.open('Submitted Successfully', '', {
       duration: 5000,
     });

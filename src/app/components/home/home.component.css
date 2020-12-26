@@ -1,7 +1,8 @@
 h1 {
-  background-color: #FF4500;
-    margin: 0px;
-  }
+  background-color: grey;
+  margin: 0px;
+  color: white;
+}
 
 mat-card{
 margin: 300px;
