@@ -2,9 +2,20 @@
 <app-sidenav></app-sidenav>
 <div class="mainground">
 <mat-tab-group>
-  <mat-tab label="Red"> <app-red-customize></app-red-customize> </mat-tab>
-  <mat-tab label="Blue"> <app-blue-customize></app-blue-customize> </mat-tab>
-  <mat-tab label="Green"> <app-green-customize></app-green-customize> </mat-tab>
-  <mat-tab label="Yellow"> <app-yellow-customize></app-yellow-customize> </mat-tab>
+  <mat-tab label="Red">
+    <p style="color: white;background-color: red; font-weight: bold;">You Selected Red</p><br>
+    <app-red-customize></app-red-customize> 
+  </mat-tab>
+  <mat-tab label="Blue"> 
+    <p style="color: white;background-color: blue; font-weight: bold;">You Selected Blue</p><br>
+    <app-blue-customize></app-blue-customize>
+  </mat-tab>
+  <mat-tab label="Green"> 
+    <p style="color: white;background-color: darkgreen; font-weight: bold;">You Selected Green</p><br>
+    <app-green-customize></app-green-customize> 
+  </mat-tab>
+  <mat-tab label="Yellow"> 
+    <p style="color: white;background-color:yellowgreen; font-weight: bold;">You Selected Yellow</p><br>
+    <app-yellow-customize></app-yellow-customize> </mat-tab>
 </mat-tab-group>
 </div>
