@@ -4,6 +4,8 @@
   
   body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden; /* Hide scrollbars */
+
   }
   
   /* Style the header  where voterbot is written*/
