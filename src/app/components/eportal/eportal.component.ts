@@ -31,7 +31,9 @@ export class EportalComponent implements OnInit {
   headboys;
   headgirls;
   fontColor;
+
   // DataRedMale;
+  
 
   ngOnInit(): void {
     this.role = this.aut.getuser();
@@ -147,5 +149,10 @@ export class EportalComponent implements OnInit {
     audio.load();
     audio.play();
   }
+
+  //  this.st=function(){
+  //   return 0;
+  //   };
+
 
 }

@@ -24,9 +24,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AngularFireDatabaseModule} from 'angularfire2/database';
 import {MatIconModule} from '@angular/material/icon';
-import { AngularFireModule} from 'angularfire2';
 import { environment } from 'src/environments/environment';
 import {MatSortModule} from '@angular/material/sort';
 
@@ -65,7 +63,6 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     HttpClientModule,
     MatSnackBarModule,
-    AngularFireDatabaseModule,
     MatIconModule,
     MatSortModule
   ],

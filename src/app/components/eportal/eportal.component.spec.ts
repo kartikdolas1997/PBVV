@@ -2,13 +2,24 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EportalComponent } from './eportal.component';
 
-describe('EportalComponent', () => {
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
+
+fdescribe('EportalComponent', () => {
   let component: EportalComponent;
   let fixture: ComponentFixture<EportalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EportalComponent ]
+      declarations: [ EportalComponent ],
+      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule, MatSnackBarModule, 
+        RouterTestingModule.withRoutes([])],
+      providers: [ AuthenticateService],
     })
     .compileComponents();
   }));
@@ -22,4 +33,24 @@ describe('EportalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('function textColor', () => {
+    component.textColor('Red');
+    expect(component.fontColor).toEqual('#ff0000');
+    component.textColor('Blue');
+    expect(component.fontColor).toEqual('#0000ff');
+    component.textColor('Green');
+    expect(component.fontColor).toEqual('#006600');
+    component.textColor('Yellow');
+    expect(component.fontColor).toEqual('#cccc00');
+    component.textColor('def');
+    expect(component.fontColor).toEqual('#cccc00');
+
+
+  });
+  it('function btndisable', () => {
+    const e = {valid:false}
+    expect(component.btndisable(e)).toBeTruthy();
+  });
+
+
 });

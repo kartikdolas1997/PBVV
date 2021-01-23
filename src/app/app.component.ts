@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase} from 'angularfire2/database';
-import * as firebase from 'firebase/app';
-import 'firebase/firestore'
+
 
 
 @Component({

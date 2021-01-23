@@ -34,10 +34,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  // dumy(e) {
-  //   console.log('i am dummy');
-  //   alert('i am dummy');
-  // }
+
 
   btndisable(e) {
     if (e.valid) {
