@@ -8,18 +8,29 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { Router } from '@angular/router'
+
+
 
 
 fdescribe('EportalComponent', () => {
   let component: EportalComponent;
   let fixture: ComponentFixture<EportalComponent>;
+  let routerStub;
+
 
   beforeEach(async(() => {
+    routerStub = {
+      navigate: jasmine.createSpy('navigate'),
+    };
+
     TestBed.configureTestingModule({
       declarations: [ EportalComponent ],
       imports: [RouterTestingModule, HttpClientTestingModule, FormsModule, MatSnackBarModule, 
         RouterTestingModule.withRoutes([])],
-      providers: [ AuthenticateService],
+      providers: [ AuthenticateService,
+        [{provide:Router, useValue: routerStub}]
+      ],
     })
     .compileComponents();
   }));
@@ -45,12 +56,17 @@ fdescribe('EportalComponent', () => {
     component.textColor('def');
     expect(component.fontColor).toEqual('#cccc00');
 
-
+    
   });
   it('function btndisable', () => {
     const e = {valid:false}
     expect(component.btndisable(e)).toBeTruthy();
   });
+  it('test for router navigate', () => {
+    component.role = undefined
+    component.ngOnInit();
+    expect(routerStub.navigate).toHaveBeenCalledWith(['/']);
 
+  });
 
 });

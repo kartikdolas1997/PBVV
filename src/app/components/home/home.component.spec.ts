@@ -5,17 +5,26 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
+import { Router } from '@angular/router'
+
 
 fdescribe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  let routerStub;
 
   beforeEach(async(() => {
+    routerStub = {
+      navigate: jasmine.createSpy('navigate'),
+    };
+
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
       imports: [RouterTestingModule, HttpClientTestingModule, FormsModule,
         RouterTestingModule.withRoutes([])],
-      providers: [ AuthenticateService],
+      providers: [ AuthenticateService,
+      [{provide:Router, useValue: routerStub}]
+      ],
     })
     .compileComponents();
   }));
@@ -33,10 +42,24 @@ fdescribe('HomeComponent', () => {
     const e = {valid: false};
     expect(component.btndisable(e)).toBeTruthy();
   });
-  xit('function btn disable', () => {
-    const e = {value:{role: 'Teacher',password: 'pass1'}};
+  it('function onsubmit TRUE1', () => {
+    const e = {value:{role: 'Teacher',password: 'pass1',}};
     console.log(e.value.role);
-    
-    expect(component.onSubmit(e)).toBeTruthy();
+    component.onSubmit(e);
+    expect(routerStub.navigate).toHaveBeenCalledWith(['portal']);
   });
+  it('function onsubmit TRUE2', () => {
+    const e = {value:{role: 'Student',password: 'pass2',}};
+    console.log(e.value.role);
+    component.onSubmit(e);
+    expect(routerStub.navigate).toHaveBeenCalledWith(['portal']);
+  });
+  // it('function onsubmit', () => {
+  //   const e = {value:{role: 'Student',password: 'pass3',}};
+  //   console.log(e.value.role);
+  //   component.onSubmit(e);
+  //   expect(e.ClearForm(e)).toHaveBeenCalled();
+  //   // expect(routerStub.navigate).toHaveBeenCalledWith(['portal']);
+  // });
+
 });

@@ -54,7 +54,6 @@ export class ResultsComponent implements OnInit {
       color : col,
       gender : gen,
     };
-    // this.clickMethod()
     if(confirm("Are you sure to delete? ")) {
       console.log("Implement delete functionality here");
       this.resul.Deletevote(inpobj)
@@ -79,9 +78,6 @@ export class ResultsComponent implements OnInit {
 
     this.dataSourceGreenMale = this.resul.fetchresults('green', 'male');
     this.dataSourceGreenFemale = this.resul.fetchresults('green', 'female');
-
-  }
-  clickMethod() {
 
   }
 }
