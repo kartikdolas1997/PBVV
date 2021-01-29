@@ -4,7 +4,6 @@ import { HomeComponent } from './home.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-
 import { Router } from '@angular/router'
 
 
@@ -20,7 +19,7 @@ fdescribe('HomeComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [ HomeComponent ],
-      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule,
+      imports: [ HttpClientTestingModule, FormsModule,
         RouterTestingModule.withRoutes([])],
       providers: [ AuthenticateService,
       [{provide:Router, useValue: routerStub}]
@@ -42,7 +41,7 @@ fdescribe('HomeComponent', () => {
     const e = {valid: false};
     expect(component.btndisable(e)).toBeTruthy();
   });
-  it('function onsubmit TRUE1', () => {
+  xit('function onsubmit TRUE1', () => {
     const e = {value:{role: 'Teacher',password: 'pass1',}};
     console.log(e.value.role);
     component.onSubmit(e);

@@ -13,7 +13,7 @@ fdescribe('RedCustomizeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RedCustomizeComponent ],
-      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule, MatSnackBarModule, 
+      imports: [ HttpClientTestingModule, FormsModule, MatSnackBarModule, 
         RouterTestingModule.withRoutes([])],
     })
     .compileComponents();

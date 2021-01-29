@@ -7,9 +7,9 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
 import { Router } from '@angular/router'
 import { ResultsService } from '../results/results.service';
+
 
 const MockResultsService = {
   // fetchresults: () =>
@@ -29,7 +29,7 @@ fdescribe('EportalComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [ EportalComponent ],
-      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule, MatSnackBarModule, 
+      imports: [ HttpClientTestingModule, FormsModule, MatSnackBarModule, 
         RouterTestingModule.withRoutes([])],
       providers: [ AuthenticateService,
         [{provide:Router, useValue: routerStub}],
