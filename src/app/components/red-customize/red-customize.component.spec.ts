@@ -1,14 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RedCustomizeComponent } from './red-customize.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-describe('RedCustomizeComponent', () => {
+fdescribe('RedCustomizeComponent', () => {
   let component: RedCustomizeComponent;
   let fixture: ComponentFixture<RedCustomizeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RedCustomizeComponent ]
+      declarations: [ RedCustomizeComponent ],
+      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule, MatSnackBarModule, 
+        RouterTestingModule.withRoutes([])],
     })
     .compileComponents();
   }));
@@ -21,5 +27,9 @@ describe('RedCustomizeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('function btndisable', () => {
+    const e = {valid:false}
+    expect(component.btndisable(e)).toBeTruthy();
   });
 });

@@ -9,8 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { Router } from '@angular/router'
+import { ResultsService } from '../results/results.service';
 
-
+const MockResultsService = {
+  // fetchresults: () =>
+};
 
 
 fdescribe('EportalComponent', () => {
@@ -29,7 +32,9 @@ fdescribe('EportalComponent', () => {
       imports: [RouterTestingModule, HttpClientTestingModule, FormsModule, MatSnackBarModule, 
         RouterTestingModule.withRoutes([])],
       providers: [ AuthenticateService,
-        [{provide:Router, useValue: routerStub}]
+        [{provide:Router, useValue: routerStub}],
+        [{provide:ResultsService, useValue: MockResultsService}],
+
       ],
     })
     .compileComponents();
