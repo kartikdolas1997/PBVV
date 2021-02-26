@@ -18,6 +18,7 @@ export class BlueCustomizeComponent implements OnInit {
   Blue_B2;
   Blue_B3;
   Blue_B4;
+  newBlue: { G1: any; G2: any; G3: any; G4: any; B1: any; B2: any; B3: any; B4: any; };
 
   constructor(private auth: AuthenticateService,
               private router: Router,
@@ -30,7 +31,7 @@ export class BlueCustomizeComponent implements OnInit {
     }
   }
   onSubmit(e) {
-    const newBlue = {
+     this.newBlue = {
       G1: e.value.Blue_G1,
       G2: e.value.Blue_G2,
       G3: e.value.Blue_G3,
@@ -40,8 +41,8 @@ export class BlueCustomizeComponent implements OnInit {
       B3: e.value.Blue_B3,
       B4: e.value.Blue_B4,
     };
-    console.log(newBlue);
-    this.auth.submitnomin(newBlue).subscribe(
+    console.log(this.newBlue);
+    this.auth.submitnomin(this.newBlue).subscribe(
       (res) => {
         console.log(res);
         this.snackBar.open('Submitted Successfully', '', {
