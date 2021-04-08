@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, NgForm } from "@angular/forms";
 import { HomeComponent } from "./home.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { AuthenticateService } from "src/app/services/authenticate.service";
@@ -25,6 +25,7 @@ fdescribe("HomeComponent", () => {
       ],
       providers: [
         AuthenticateService,
+        NgForm,
         [{ provide: Router, useValue: routerStub }],
       ],
     }).compileComponents();
@@ -55,6 +56,15 @@ fdescribe("HomeComponent", () => {
     component.onSubmit(e);
     expect(routerStub.navigate).toHaveBeenCalledWith(["portal"]);
   });
+
+  it('should reset form', () => {
+    const debugElement = fixture.debugElement;
+    const form: NgForm = debugElement.children[0].injector.get(NgForm);
+    const spy = spyOn(form, 'resetForm');
+    component.ClearForm(form);
+    expect(spy).toHaveBeenCalled();
+  });
+
   // it('function onsubmit', () => {
   //   const e = {value:{role: 'Student',password: 'pass3',}};
   //   console.log(e.value.role);
