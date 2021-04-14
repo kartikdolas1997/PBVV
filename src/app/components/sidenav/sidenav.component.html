@@ -1,10 +1,10 @@
 <nav> 
     <ul>
       <!-- <li><a href="">Home</a></li> -->
-      <li><mat-icon [routerLink]="['/portal']" (click)="selected('portal')" [ngStyle]="{'color':VarName==='portal'?'blue':''}">how_to_vote</mat-icon>Election Portal</li>
-      <li *ngIf="role == 'Teacher'"><mat-icon  [routerLink]="['/customize']" (click)="selected('customize')" [ngStyle]="{'color':VarName==='customize'?'blue':''}">build</mat-icon>Customize</li>
-      <!-- <li *ngIf="role == 'Teacher'"><a [routerLink]="['/results']" (click)="selected('results')" [ngStyle]="{'color':VarName==='results'?'blue':''}">Results</a></li> -->
-      <li *ngIf="role == 'Teacher'"><mat-icon [routerLink]="['/results']" (click)="selected('results')" [ngStyle]="{'color':VarName==='results'?'blue':''}">list_alt</mat-icon>Results</li>
+      <li><mat-icon [routerLink]="['/portal']" routerLinkActive="class1">how_to_vote</mat-icon>Election Portal</li>
+      <li *ngIf="role == 'Teacher'"><mat-icon routerLinkActive="class1" [routerLink]="['/customize']">build</mat-icon>Customize</li>
+      <!-- <li *ngIf="role == 'Teacher'"><a [routerLink]="['/results']" (click)="selected('results')">Results</a></li> -->
+      <li *ngIf="role == 'Teacher'"><mat-icon routerLinkActive="class1" [routerLink]="['/results']">list_alt</mat-icon>Results</li>
     </ul>
     <br><br>
     You are logged in as <b>{{role}}</b>.<br>
