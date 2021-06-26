@@ -18,11 +18,12 @@ app-sidenav {
     margin: 0px;
     color: white;
   }
-  table {
-    width: 80%;
-    margin: 5%;
-    overflow: hidden; /* Hide scrollbars */
-  }
+   table {
+    width: 100%;
+    /* margin: 5%;
+    position: relative;
+    overflow: hidden;  */
+  } 
   /* style {
     width: 900px;
   } */
