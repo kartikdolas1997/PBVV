@@ -11,7 +11,7 @@ import {Sort} from '@angular/material/sort';
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css']
 })
-export class ResultsComponent implements OnInit {
+export class ResultsComponent  {
   role;
   ELEMENT_DATA_RED_MALE;
   ELEMENT_DATA_RED_FEMALE
@@ -59,7 +59,7 @@ export class ResultsComponent implements OnInit {
   // dataSourceGreenFemale = this.ELEMENT_DATA_GREEN_FEMALE;
 
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.role = this.aut.getuser();
     if (this.role ===  undefined) {
       this.router.navigate(['/']);
