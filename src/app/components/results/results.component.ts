@@ -96,6 +96,17 @@ export class ResultsComponent implements OnInit {
       .subscribe(
         (response) => {
           console.log(response);
+          this.dataSourceRedMale = this.resul.fetchresults('red', 'male');
+          this.dataSourceRedFemale = this.resul.fetchresults('red', 'female');
+      
+          this.dataSourceYellowMale = this.resul.fetchresults('yellow', 'male');
+          this.dataSourceYellowFemale = this.resul.fetchresults('yellow', 'female');
+      
+          this.dataSourceBlueMale = this.resul.fetchresults('blue', 'male');
+          this.dataSourceBlueFemale = this.resul.fetchresults('blue', 'female');
+      
+          this.dataSourceGreenMale = this.resul.fetchresults('green', 'male');
+          this.dataSourceGreenFemale = this.resul.fetchresults('green', 'female');
         },
         (error) => {
           console.error(error);
@@ -103,17 +114,7 @@ export class ResultsComponent implements OnInit {
       );
     }
 
-    this.dataSourceRedMale = this.resul.fetchresults('red', 'male');
-    this.dataSourceRedFemale = this.resul.fetchresults('red', 'female');
 
-    this.dataSourceYellowMale = this.resul.fetchresults('yellow', 'male');
-    this.dataSourceYellowFemale = this.resul.fetchresults('yellow', 'female');
-
-    this.dataSourceBlueMale = this.resul.fetchresults('blue', 'male');
-    this.dataSourceBlueFemale = this.resul.fetchresults('blue', 'female');
-
-    this.dataSourceGreenMale = this.resul.fetchresults('green', 'male');
-    this.dataSourceGreenFemale = this.resul.fetchresults('green', 'female');
 
   }
 }
