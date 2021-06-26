@@ -13,33 +13,50 @@ import {Sort} from '@angular/material/sort';
 })
 export class ResultsComponent implements OnInit {
   role;
+  ELEMENT_DATA_RED_MALE;
+  ELEMENT_DATA_RED_FEMALE
+  ELEMENT_DATA_YELLOW_MALE
+  ELEMENT_DATA_YELLOW_FEMALE
+  ELEMENT_DATA_BLUE_MALE
+  ELEMENT_DATA_BLUE_FEMALE
+  ELEMENT_DATA_GREEN_MALE
+  ELEMENT_DATA_GREEN_FEMALE
+
+  dataSourceRedMale;
+  dataSourceRedFemale;
+  dataSourceYellowMale
+  dataSourceYellowFemale
+  dataSourceBlueMale
+  dataSourceBlueFemale
+  dataSourceGreenMale
+  dataSourceGreenFemale
 
   constructor( public resul: ResultsService,
                private aut: AuthenticateService,
                private router: Router) { }
   displayedColumns: string[] = ['name', 'votes'];
-  ELEMENT_DATA = this.resul.fetchresults('yellow', 'female');
-  dataSource = this.ELEMENT_DATA;
+  // ELEMENT_DATA = this.resul.fetchresults('yellow', 'female');
+  // dataSource = this.ELEMENT_DATA;
 
-  ELEMENT_DATA_RED_MALE = this.resul.fetchresults('red', 'male');
-  dataSourceRedMale = this.ELEMENT_DATA_RED_MALE;
-  ELEMENT_DATA_RED_FEMALE = this.resul.fetchresults('red', 'female');
-  dataSourceRedFemale = this.ELEMENT_DATA_RED_FEMALE;
+  // ELEMENT_DATA_RED_MALE = this.resul.fetchresults('red', 'male');
+  // dataSourceRedMale = this.ELEMENT_DATA_RED_MALE;
+  // ELEMENT_DATA_RED_FEMALE = this.resul.fetchresults('red', 'female');
+  // dataSourceRedFemale = this.ELEMENT_DATA_RED_FEMALE;
 
-  ELEMENT_DATA_YELLOW_MALE = this.resul.fetchresults('yellow', 'male');
-  dataSourceYellowMale = this.ELEMENT_DATA_YELLOW_MALE;
-  ELEMENT_DATA_YELLOW_FEMALE = this.resul.fetchresults('yellow', 'female');
-  dataSourceYellowFemale = this.ELEMENT_DATA_YELLOW_FEMALE;
+  // ELEMENT_DATA_YELLOW_MALE = this.resul.fetchresults('yellow', 'male');
+  // dataSourceYellowMale = this.ELEMENT_DATA_YELLOW_MALE;
+  // ELEMENT_DATA_YELLOW_FEMALE = this.resul.fetchresults('yellow', 'female');
+  // dataSourceYellowFemale = this.ELEMENT_DATA_YELLOW_FEMALE;
 
-  ELEMENT_DATA_BLUE_MALE = this.resul.fetchresults('blue', 'male');
-  dataSourceBlueMale = this.ELEMENT_DATA_BLUE_MALE;
-  ELEMENT_DATA_BLUE_FEMALE = this.resul.fetchresults('blue', 'female');
-  dataSourceBlueFemale = this.ELEMENT_DATA_BLUE_FEMALE;
+  // ELEMENT_DATA_BLUE_MALE = this.resul.fetchresults('blue', 'male');
+  // dataSourceBlueMale = this.ELEMENT_DATA_BLUE_MALE;
+  // ELEMENT_DATA_BLUE_FEMALE = this.resul.fetchresults('blue', 'female');
+  // dataSourceBlueFemale = this.ELEMENT_DATA_BLUE_FEMALE;
 
-  ELEMENT_DATA_GREEN_MALE = this.resul.fetchresults('green', 'male');
-  dataSourceGreenMale = this.ELEMENT_DATA_GREEN_MALE;
-  ELEMENT_DATA_GREEN_FEMALE = this.resul.fetchresults('green', 'female');
-  dataSourceGreenFemale = this.ELEMENT_DATA_GREEN_FEMALE;
+  // ELEMENT_DATA_GREEN_MALE = this.resul.fetchresults('green', 'male');
+  // dataSourceGreenMale = this.ELEMENT_DATA_GREEN_MALE;
+  // ELEMENT_DATA_GREEN_FEMALE = this.resul.fetchresults('green', 'female');
+  // dataSourceGreenFemale = this.ELEMENT_DATA_GREEN_FEMALE;
 
 
   ngOnInit(): void {
@@ -48,6 +65,25 @@ export class ResultsComponent implements OnInit {
       this.router.navigate(['/']);
     }
 
+    this.ELEMENT_DATA_RED_MALE = this.resul.fetchresults('red', 'male');
+    this.dataSourceRedMale = this.ELEMENT_DATA_RED_MALE;
+    this.ELEMENT_DATA_RED_FEMALE = this.resul.fetchresults('red', 'female');
+    this.dataSourceRedFemale = this.ELEMENT_DATA_RED_FEMALE;
+  
+    this.ELEMENT_DATA_YELLOW_MALE = this.resul.fetchresults('yellow', 'male');
+    this.dataSourceYellowMale = this.ELEMENT_DATA_YELLOW_MALE;
+    this.ELEMENT_DATA_YELLOW_FEMALE = this.resul.fetchresults('yellow', 'female');
+    this.dataSourceYellowFemale = this.ELEMENT_DATA_YELLOW_FEMALE;
+  
+    this.ELEMENT_DATA_BLUE_MALE = this.resul.fetchresults('blue', 'male');
+    this.dataSourceBlueMale = this.ELEMENT_DATA_BLUE_MALE;
+    this.ELEMENT_DATA_BLUE_FEMALE = this.resul.fetchresults('blue', 'female');
+    this.dataSourceBlueFemale = this.ELEMENT_DATA_BLUE_FEMALE;
+  
+    this.ELEMENT_DATA_GREEN_MALE = this.resul.fetchresults('green', 'male');
+    this.dataSourceGreenMale = this.ELEMENT_DATA_GREEN_MALE;
+    this.ELEMENT_DATA_GREEN_FEMALE = this.resul.fetchresults('green', 'female');
+    this.dataSourceGreenFemale = this.ELEMENT_DATA_GREEN_FEMALE;
   }
   Del(col, gen) {
     const inpobj = {
