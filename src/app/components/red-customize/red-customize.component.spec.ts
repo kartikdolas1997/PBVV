@@ -6,7 +6,7 @@ import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { FormsModule } from "@angular/forms";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 
-fdescribe("RedCustomizeComponent", () => {
+xdescribe("RedCustomizeComponent", () => {
   let component: RedCustomizeComponent;
   let fixture: ComponentFixture<RedCustomizeComponent>;
 

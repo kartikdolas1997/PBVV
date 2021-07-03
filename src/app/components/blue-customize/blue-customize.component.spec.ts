@@ -3,7 +3,7 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { BlueCustomizeComponent } from './blue-customize.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
 const mockopblue =
@@ -13,7 +13,8 @@ const mockopblue =
 
 const MockAuthService = {
   submitnominBlue:(id) => (mockopblue),
-  getuser:() => ("Teacher") 
+  getuser:() => (undefined)
+
 };
 
 
@@ -21,8 +22,14 @@ const MockAuthService = {
 fdescribe('BlueCustomizeComponent', () => {
   let component: BlueCustomizeComponent;
   let fixture: ComponentFixture<BlueCustomizeComponent>;
+  let routerStub;
+
 
   beforeEach(async(() => {
+    routerStub = {
+      navigate: jasmine.createSpy("navigate"),
+    };
+
     TestBed.configureTestingModule({
       declarations: [ BlueCustomizeComponent ],
       imports: [HttpClientTestingModule, MatSnackBarModule, FormsModule, RouterTestingModule],
@@ -46,6 +53,21 @@ fdescribe('BlueCustomizeComponent', () => {
   it('function btndisable', () => {
     const e = {valid:false}
     expect(component.btndisable(e)).toBeTruthy();
+  });
+
+  xit('Ngoninit', () => {
+    component.role =undefined;
+    component.ngOnInit()
+    expect(routerStub.navigate).toHaveBeenCalledWith(["/"]);
+
+  });
+
+  it('should reset form', () => {
+    const debugElement = fixture.debugElement;
+    const form: NgForm = debugElement.children[0].injector.get(NgForm);
+    const spy = spyOn(form, 'resetForm');
+    component.ClearForm(form);
+    expect(spy).toHaveBeenCalled();
   });
 
   xit('function onsubmit', () => {

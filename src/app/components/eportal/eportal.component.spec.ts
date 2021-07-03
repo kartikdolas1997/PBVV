@@ -14,7 +14,7 @@ const MockResultsService = {
   // fetchresults: () =>
 };
 
-fdescribe("EportalComponent", () => {
+xdescribe("EportalComponent", () => {
   let component: EportalComponent;
   let fixture: ComponentFixture<EportalComponent>;
   let routerStub;
