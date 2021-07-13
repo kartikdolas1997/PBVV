@@ -15,7 +15,7 @@ const Mockdata1 = {
   B4: `Boy4`,
 }
 
-fdescribe('EportalService', () => {
+describe('EportalService', () => {
   let service: EportalService;
   let httpTestCtrl : HttpTestingController;
 

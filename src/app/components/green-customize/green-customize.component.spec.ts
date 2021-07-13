@@ -5,7 +5,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 
-fdescribe('GreenCustomizeComponent', () => {
+describe('GreenCustomizeComponent', () => {
   let component: GreenCustomizeComponent;
   let fixture: ComponentFixture<GreenCustomizeComponent>;
 

@@ -59,7 +59,7 @@ export class ResultsComponent  {
   // dataSourceGreenFemale = this.ELEMENT_DATA_GREEN_FEMALE;
 
 
-  ngAfterViewInit(): void {
+  ngAfterContentInit(): void {
     this.role = this.aut.getuser();
     if (this.role ===  undefined) {
       this.router.navigate(['/']);

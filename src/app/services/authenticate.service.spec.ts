@@ -16,7 +16,7 @@ const Mockdata1 = {
   B4: `Boy4`,
 }
 
-fdescribe('AuthenticateService', () => {
+describe('AuthenticateService', () => {
   let service: AuthenticateService;
   let httpTestCtrl : HttpTestingController;
   beforeEach(() => {

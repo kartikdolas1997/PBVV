@@ -23,7 +23,7 @@ export class YellowCustomizeComponent implements OnInit {
   constructor(
     public auth: AuthenticateService,
     private resl: ResultsService,
-    private snackBar: MatSnackBar
+    public snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -67,6 +67,7 @@ export class YellowCustomizeComponent implements OnInit {
       }
     );
   }
+  
   ClearForm(e) {
     e.resetForm();
   }

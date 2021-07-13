@@ -19,7 +19,7 @@ const MockAuthService = {
 
 
 
-fdescribe('BlueCustomizeComponent', () => {
+describe('BlueCustomizeComponent', () => {
   let component: BlueCustomizeComponent;
   let fixture: ComponentFixture<BlueCustomizeComponent>;
   let routerStub;

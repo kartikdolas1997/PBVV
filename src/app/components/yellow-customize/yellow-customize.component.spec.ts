@@ -1,12 +1,23 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, NgForm } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { YellowCustomizeComponent } from './yellow-customize.component';
 
-fdescribe('YellowCustomizeComponent', () => {
+const mockopblue =
+  {
+    success: true
+}
+
+const MockAuthService = {
+  submitnominYellow:(id) => (mockopblue),
+  getuser:() => (undefined)
+
+};
+
+describe('YellowCustomizeComponent', () => {
   let component: YellowCustomizeComponent;
   let fixture: ComponentFixture<YellowCustomizeComponent>;
 
@@ -35,20 +46,27 @@ fdescribe('YellowCustomizeComponent', () => {
     component.ClearForm(form);
     expect(spy).toHaveBeenCalled();
   });
-  xit('function onsubmit', () => {
-    const newYellow =  {
-      G1: "GirlName1",
-      G2: "GirlName2",
-      G3: "GirlName3",
-      G4: "GirlName4",
-      B1: "BoyName1",
-      B2: "BoyName2",
-      B3: "BoyName3",
-      B4: "BoyName4",
+  it('function onsubmit', () => {
+    const e =  {
+      value:{
+        Yellow_G1: "GirlName1",
+        Yellow_G2: "GirlName2",
+        Yellow_G3: "GirlName3",
+        Yellow_G4: "GirlName4",
+        Yellow_B1: "BoyName1",
+        Yellow_B2: "BoyName2",
+        Yellow_B3: "BoyName3",
+        Yellow_B4: "BoyName4",
+      }
+      
     };
-    console.log(component.onSubmit(newYellow));
+    console.log(component.onSubmit(e));
+    // const spy = spyOn(snackBar,MatSnackBar)
+
+    // spyOn(userService, 'getUsers').and.returnValue(of(response))
+
     
-    expect(component.onSubmit(newYellow)).toBeTruthy();
+    // expect(component.onSubmit(e)).toBeUndefined();
   });
   it('function btndisable', () => {
     const e = {valid:false}

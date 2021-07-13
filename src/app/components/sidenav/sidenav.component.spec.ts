@@ -9,7 +9,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav.component';
 
-fdescribe('SidenavComponent', () => {
+describe('SidenavComponent', () => {
   let component: SidenavComponent;
   let fixture: ComponentFixture<SidenavComponent>;
 

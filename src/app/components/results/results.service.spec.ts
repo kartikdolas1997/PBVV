@@ -17,14 +17,14 @@ const Mockdata1 = {
 }
 
 
-fdescribe('ResultsService', () => {
+describe('ResultsService', () => {
   let service: ResultsService;
   let httpTestCtrl : HttpTestingController;
 
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule, HttpClientTestingModule]
     });
     service = TestBed.inject(ResultsService);
   });
