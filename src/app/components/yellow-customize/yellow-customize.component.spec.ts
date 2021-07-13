@@ -46,7 +46,7 @@ describe('YellowCustomizeComponent', () => {
     component.ClearForm(form);
     expect(spy).toHaveBeenCalled();
   });
-  it('function onsubmit', () => {
+  xit('function onsubmit', () => {
     const e =  {
       value:{
         Yellow_G1: "GirlName1",
@@ -61,12 +61,8 @@ describe('YellowCustomizeComponent', () => {
       
     };
     console.log(component.onSubmit(e));
-    // const spy = spyOn(snackBar,MatSnackBar)
-
-    // spyOn(userService, 'getUsers').and.returnValue(of(response))
-
-    
-    // expect(component.onSubmit(e)).toBeUndefined();
+    // const spy = spyOn(MatSnackBar,'open')
+    // this.
   });
   it('function btndisable', () => {
     const e = {valid:false}

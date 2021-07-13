@@ -44,7 +44,7 @@ xdescribe("HomeComponent", () => {
     const e = { valid: false };
     expect(component.btndisable(e)).toBeTruthy();
   });
-  xit("function onsubmit TRUE1", () => {
+  it("function onsubmit TRUE1", () => {
     const e = { value: { role: "Teacher", password: "pass1" } };
     // console.log(e.value.role);
     component.onSubmit(e);
@@ -66,7 +66,7 @@ xdescribe("HomeComponent", () => {
     component.ClearForm(form);
     expect(spy).toHaveBeenCalled();  });
 
-  it('should reset form', () => {
+  xit('should reset form', () => {
     const debugElement = fixture.debugElement;
     const form: NgForm = debugElement.children[0].injector.get(NgForm);
     const spy = spyOn(form, 'resetForm');
