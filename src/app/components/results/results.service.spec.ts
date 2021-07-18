@@ -64,7 +64,7 @@ describe('ResultsService', () => {
     req.flush([Mockcolor,MockGen])
   });
 
-  it('submitnominGreen', (done) => {
+  it('DeleteVote error', (done) => {
     const mockError = {error: 'someError'} as ErrorEvent;
     service.Deletevote(DeleteObj).subscribe(() => {}, (thrownError) =>{
       console.log('t',thrownError);

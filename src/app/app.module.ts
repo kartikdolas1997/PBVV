@@ -27,7 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import { environment } from 'src/environments/environment';
 import {MatSortModule} from '@angular/material/sort';
-import { OtploginComponent } from './otplogin/otplogin.component';
+// import { OtploginComponent } from './otplogin/otplogin.component';
 
 
 
@@ -46,7 +46,7 @@ import { OtploginComponent } from './otplogin/otplogin.component';
     GreenCustomizeComponent,
     YellowCustomizeComponent,
     SidenavComponent,
-    OtploginComponent,
+    // OtploginComponent,
   ],
 
   imports: [

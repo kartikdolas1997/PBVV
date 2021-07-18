@@ -4,7 +4,7 @@ import { EportalComponent } from './components/eportal/eportal.component';
 import { CustomizeComponent } from './components/customize/customize.component';
 import { ResultsComponent } from './components/results/results.component';
 import { HomeComponent } from './components/home/home.component';
-import { OtploginComponent } from './otplogin/otplogin.component';
+// import { OtploginComponent } from './otplogin/otplogin.component';
 
 
 
