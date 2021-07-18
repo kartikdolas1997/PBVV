@@ -3,6 +3,13 @@ import { TestBed } from '@angular/core/testing';
 import { ResultsService } from './results.service';
 import { environment } from 'src/environments/environment';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Data } from '@angular/router';
+const DeleteObj = {
+  color : 'red',
+  gender : 'male',
+
+}
 const Mockcolor = 'green';
 const MockGen = 'male';
 const Mockdata1 = {
@@ -47,15 +54,28 @@ describe('ResultsService', () => {
     req.flush([Mockcolor,MockGen])
   });
 
-  it('submitnominGreen', () => {
-    service.Deletevote(Mockdata1).subscribe((posts) =>{
-      expect(posts).toBe(Mockdata1, 'should check mock data');
+  it('DeleteVote', () => {
+    service.Deletevote(DeleteObj).subscribe((posts) =>{
+      expect(posts).toEqual([Mockcolor,MockGen], 'should check mock data');
     });
     const req =  httpTestCtrl.expectOne(environment.apiUrl + '/api/reset/abc');
     expect(req.request.method).toBe('POST');
     expect(req.cancelled).toBeFalsy();
-    req.flush(Mockdata1)
+    req.flush([Mockcolor,MockGen])
   });
+
+  it('submitnominGreen', (done) => {
+    const mockError = {error: 'someError'} as ErrorEvent;
+    service.Deletevote(DeleteObj).subscribe(() => {}, (thrownError) =>{
+      console.log('t',thrownError);
+      console.log(mockError);
+
+      expect(thrownError.error).toEqual(mockError);
+      done();
+    });
+    const req =  httpTestCtrl.expectOne(environment.apiUrl + '/api/reset/abc');
+    req.error(mockError);
+});
 
 
 });
