@@ -73,7 +73,7 @@ describe('YellowCustomizeComponent', () => {
     // this.
   });
 
-  fit('should open the snack bar with correct arguments when form submitted', () => {
+  it('should open the snack bar with correct arguments when form submitted', () => {
     const e =  {
       value:{
         Yellow_G1: "YGirlName1",
