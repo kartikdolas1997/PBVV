@@ -21,9 +21,9 @@ export class YellowCustomizeComponent implements OnInit {
   headgirls: any;
 
   constructor(
-    public auth: AuthenticateService,
+    private auth: AuthenticateService,
     private resl: ResultsService,
-    public snackBar: MatSnackBar
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
