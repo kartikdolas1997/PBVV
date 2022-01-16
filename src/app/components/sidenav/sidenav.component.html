@@ -5,6 +5,7 @@
       <li *ngIf="role == 'Teacher'"><mat-icon routerLinkActive="class1" [routerLink]="['/customize']">build</mat-icon>Customize</li>
       <!-- <li *ngIf="role == 'Teacher'"><a [routerLink]="['/results']" (click)="selected('results')">Results</a></li> -->
       <li *ngIf="role == 'Teacher'"><mat-icon routerLinkActive="class1" [routerLink]="['/results']">list_alt</mat-icon>Results</li>
+      <li *ngIf="role == 'Teacher'"><mat-icon routerLinkActive="class1" [routerLink]="['/change-password']">lock</mat-icon>Password</li>
     </ul>
     <br><br>
     You are logged in as <b>{{role}}</b>.<br>
